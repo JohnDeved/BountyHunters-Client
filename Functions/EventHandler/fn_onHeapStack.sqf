@@ -24,7 +24,8 @@ if (!isNil {nearWeapons}) then {
             if (!isNil {_x getVariable "buyable"}) then {
                 _name = getText (configFile >>  "CfgVehicles" >>  typeOf _x >> "displayName");
                 _price = getNumber (missionConfigFile >>  "CfgPrices" >> "Weapons" >> typeOf _x >> "price");
-                _nearBuyableWeapons pushBack [_x, _name, _price];
+                _priceAmmo = getNumber (missionConfigFile >>  "CfgPrices" >> "Weapons" >> typeOf _x >> "ammoPrice");
+                _nearBuyableWeapons pushBack [_x, _name, _price, _priceAmmo];
             };
         } forEach nearWeapons;
         nearBuyableWeapons = _nearBuyableWeapons;

@@ -8,6 +8,9 @@ class Functions {
     class payment_fnc_carShop {
         allowedTargets = 2;
     };
+    class payment_fnc_gunShop {
+        allowedTargets = 2;
+    };
 };
 
 class Commands {

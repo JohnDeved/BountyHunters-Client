@@ -32,25 +32,31 @@ class Weapons
     class Weapon_hgun_Pistol_heavy_01_F
     {
         price = 5000;
+        ammoPrice = 250;
     };
     class Weapon_hgun_ACPC2_F
     {
         price = 5000;
+        ammoPrice = 250;
     };
     class Weapon_hgun_Rook40_F
     {
         price = 5000;
+        ammoPrice = 250;
     };
     class Weapon_hgun_P07_F
     {
         price = 5000;
+        ammoPrice = 250;
     };
     class Weapon_hgun_Pistol_heavy_02_F
     {
         price = 5000;
+        ammoPrice = 250;
     };
     class Weapon_hgun_PDW2000_F
     {
         price = 5000;
+        ammoPrice = 250;
     };
 };
