@@ -16,7 +16,7 @@ switch (_key) do {
             };
         };
     };
-    case (0x12): {
+    case (0x21): {
         if (cursorObject isKindOf "WeaponHolder") then {
             if (!isNil {cursorObject getVariable "buyable"}) then {
                 if ((cursorObject distance player) < 5) then {

@@ -53,7 +53,7 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                 _x ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _x) / 2), .5, ctrlTextHeight _x];
                 if (cursorObject == _gun) then {
                     if ((_gun distance player) < 5) then {
-                        _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>WEAPON | AMMO</t><br/><t color='#00ff00'>$" + str _price + " | $" + str _priceAmmo + "</t><br/>Press [Win] to <t color='#00ff00'>BUY WEAPON</t><br/>Press [E] to <t color='#00ff00'>BUY AMMO</t></t>");
+                        _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>WEAPON | AMMO</t><br/><t color='#00ff00'>$" + str _price + " | $" + str _priceAmmo + "</t><br/>Press [Win] to <t color='#00ff00'>BUY WEAPON</t><br/>Press [F] to <t color='#00ff00'>BUY AMMO</t></t>");
                         _x ctrlSetFade 0;
                     } else {
                         _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>For Sale!</t><br/><t color='#00ff00'>$" + str _price + "</t></t>");
