@@ -1,0 +1,60 @@
+author = "JohnDev";
+onLoadName = "Bounty Hunters";
+onLoadMission = "JohnDev's Bounty Hunters";
+wreckManagerMode = 1;
+wreckLimit = 0;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 360;
+corpseManagerMode = 1;
+corpseLimit = 10;
+corpseRemovalMinTime = 1800;
+corpseRemovalMaxTime = 3600;
+scriptedPlayer = 1;
+joinUnassigned = 0;
+disabledAI = true;
+allowFunctionsLog = 0;
+disableChannels[]= {2};
+enableDebugConsole = 1;
+forceRotorLibSimulation = 0;
+enableItemsDropping = 1;
+respawnDialog = 0;
+respawn = BASE;
+respawndelay = 15;
+debriefing = 0;
+briefing = 0;
+/*loadScreen = "logo.jpg";*/
+
+#include ".\Dialog\common.hpp"
+
+class RscTitles {
+    #include ".\Dialog\Titles\carSale.hpp"
+    #include ".\Dialog\Titles\gunSale.hpp"
+    #include ".\Dialog\Titles\info.hpp"
+};
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 1;
+};
+
+class CfgVariables
+{
+	#include ".\Config\Variables.h"
+};
+
+class CfgFunctions
+{
+	#include ".\Config\Functions.h"
+};
+
+class CfgPrices
+{
+	#include ".\Config\Prices.h"
+};
+
+class CfgRemoteExec
+{
+	#include ".\config\RemoteExec.h"
+};
