@@ -24,7 +24,7 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                             _x ctrlSetFade 0;
                         };
                         if (_type == "attatchment") then {
-                            _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>ATTATCHMENT</t><br/><t color='#00ff00'>$" + str _price + "</t><br/>Press [Win] to <t color='#00ff00'>BUY ATTATCHMENT</t></t>");
+                            _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>ATTATCHMENT</t><br/><t color='#00ff00'>$" + str _price + "</t><br/>Press [Win] to <t color='#00ff00'>BUY</t></t>");
                             _x ctrlSetFade 0;
                         };
                     } else {
