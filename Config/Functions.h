@@ -5,6 +5,7 @@ class Misc_functions
 	{
 		file = "Functions\Misc";
 		class defineSync {};
+		class defineAsync {};
 	};
 };
 class EventHandler_functions
