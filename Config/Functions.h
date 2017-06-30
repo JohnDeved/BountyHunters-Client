@@ -44,7 +44,7 @@ class Heap_functions
 	tag = "heap";
 	class Heap
 	{
-		file = "Functions\Draw";
+		file = "Functions\Heap";
 		class updateInfo {};
 		class updateNearVehicles {};
 		class updateNearWeapons {};
