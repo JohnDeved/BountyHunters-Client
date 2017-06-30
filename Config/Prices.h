@@ -60,3 +60,23 @@ class Weapons
         ammoPrice = 250;
     };
 };
+
+class WeaponAttatchments
+{
+    class Item_acc_flashlight_pistol
+    {
+        price = 500;
+    };
+    class Item_optic_Aco
+    {
+        price = 500;
+    };
+    class Item_muzzle_snds_acp
+    {
+        price = 500;
+    };
+    class Item_muzzle_snds_L
+    {
+        price = 500;
+    };
+};
