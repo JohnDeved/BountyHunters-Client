@@ -29,3 +29,24 @@ class Hud_functions
 		class info {};
 	};
 };
+class Draw_functions
+{
+	tag = "draw";
+	class Draw
+	{
+		file = "Functions\Draw";
+		class hudCarSale {};
+		class hudGunSale {};
+	};
+};
+class Heap_functions
+{
+	tag = "heap";
+	class Heap
+	{
+		file = "Functions\Draw";
+		class updateInfo {};
+		class updateNearVehicles {};
+		class updateNearWeapons {};
+	};
+};
