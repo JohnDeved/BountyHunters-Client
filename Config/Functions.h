@@ -6,6 +6,7 @@ class Misc_functions
 		file = "Functions\Misc";
 		class defineSync {};
 		class defineAsync {};
+		class autoInit {};
 	};
 };
 class EventHandler_functions
@@ -25,7 +26,7 @@ class Hud_functions
 	class Hud
 	{
 		file = "Functions\Hud";
-		// !- selfinit
+		// !- auto init
 		class carSale {};
 		class gunSale {};
 		class farming {};
@@ -38,6 +39,7 @@ class Draw_functions
 	class Draw
 	{
 		file = "Functions\Draw";
+		// !- auto exec
 		class hudCarSale {};
 		class hudGunSale {};
 		class hudFarming {};
@@ -49,6 +51,7 @@ class Heap_functions
 	class Heap
 	{
 		file = "Functions\Heap";
+		// !- auto exec
 		class updateInfo {};
 		class updateNearVehicles {};
 		class updateNearWeapons {};

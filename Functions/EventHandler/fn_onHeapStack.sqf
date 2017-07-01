@@ -1,8 +1,4 @@
-call heap_fnc_updateNearVehicles;
-call heap_fnc_updateNearWeapons;
-call heap_fnc_updateNearStuff;
-call heap_fnc_updateInfo;
-
+["Heap_functions"] call misc_fnc_autoInit;
 onKeydownCooldown = false;
 
 sleep .3;
