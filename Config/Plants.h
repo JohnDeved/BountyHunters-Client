@@ -4,13 +4,13 @@ class Bushes
     {
         displayname = "Grape Vine";
     };
-    class b_ficusc1s_f
+    class b_ficusc2s_f
     {
         displayname = "Fig Bush";
     };
-    class b_neriumo2d_f
+    class b_neriumo2s_f
     {
-        displayname = "Oleander";
+        displayname = "Oleander Pink";
     };
     class b_neriumo2s_white_f
     {
@@ -26,18 +26,26 @@ class Trees
 {
     class t_oleae1s_f
     {
-        "Olive Tree"
+        displayname = "Olive Tree"
+    };
+    class t_oleae2s_f
+    {
+        displayname = "Big Olive Tree"
     };
     class t_ficusb1s_f
     {
-        "Fig Tree"
+        displayname = "Fig Tree"
     };
     class t_ficusb2s_f
     {
-        "Palm Tree"
+        displayname = "Fig Tree"
     };
     class t_pinusp3s_f
     {
-        "Pine Tree"
+        displayname = "Pine Tree"
+    };
+    class t_phoenixrupicola3s_f
+    {
+        displayname = "Palm Tree"
     };
 };

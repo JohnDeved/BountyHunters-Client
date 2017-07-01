@@ -27,6 +27,7 @@ class Hud_functions
 		file = "Functions\Hud";
 		class carSale {};
 		class gunSale {};
+		class farming {};
 		class info {};
 	};
 };
@@ -38,6 +39,7 @@ class Draw_functions
 		file = "Functions\Draw";
 		class hudCarSale {};
 		class hudGunSale {};
+		class hudFarming {};
 	};
 };
 class Heap_functions
@@ -49,5 +51,6 @@ class Heap_functions
 		class updateInfo {};
 		class updateNearVehicles {};
 		class updateNearWeapons {};
+		class updateNearStuff {};
 	};
 };

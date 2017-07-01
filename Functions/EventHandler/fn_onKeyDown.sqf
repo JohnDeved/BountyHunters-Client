@@ -23,6 +23,14 @@ if !(onKeydownCooldown) then {
                     };
                 };
             };
+            if (cursorObject in (nearTrees + nearBushes)) then {
+                {
+                    if (_x find cursorObject != -1) then {
+                        hint str _x;
+                        player playmove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
+                    };
+                } forEach (nearFarmableTrees + nearFarmableBushes);
+            };
         };
         case (0x21): {
             if (cursorObject isKindOf "WeaponHolder") then {
