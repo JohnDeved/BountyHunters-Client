@@ -11,7 +11,7 @@ class Misc_functions
 class EventHandler_functions
 {
 	tag = "event";
-	class EventHandler
+	class Event
 	{
 		file = "Functions\EventHandler";
 		class onKeyDown {};
@@ -25,6 +25,7 @@ class Hud_functions
 	class Hud
 	{
 		file = "Functions\Hud";
+		// !- selfinit
 		class carSale {};
 		class gunSale {};
 		class farming {};
