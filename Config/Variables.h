@@ -5,3 +5,7 @@ class Sync
         val = 35000;
     };
 };
+class Async
+{
+    
+};

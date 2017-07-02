@@ -30,6 +30,7 @@ class RscTitles {
     #include ".\Dialog\Titles\carSale.hpp"
     #include ".\Dialog\Titles\gunSale.hpp"
     #include ".\Dialog\Titles\info.hpp"
+    #include ".\Dialog\Titles\farming.hpp"
 };
 
 class Header
@@ -52,6 +53,11 @@ class CfgFunctions
 class CfgPrices
 {
 	#include ".\Config\Prices.h"
+};
+
+class CfgPlants
+{
+	#include ".\Config\Plants.h"
 };
 
 class CfgRemoteExec
