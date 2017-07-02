@@ -440,11 +440,65 @@ class SETANIMSPEEDCOEF
     };
 };
 
-class COMPILE
+class ADDACTION
 {
     class SYNTAX1
     {
-        targets[] = {1,1,1};
+        targets[] = {0,0,0};
+        args[] = {{"OBJECT"},{"ARRAY"}};
+    };
+};
+
+class ENDMISSION
+{
+    class SYNTAX1
+    {
+        targets[] = {0,0,0};
         args[] = {{},{"STRING"}};
+    };
+};
+
+class LOADFILE
+{
+    class SYNTAX1
+    {
+        targets[] = {0,1,0};
+        args[] = {{},{"STRING"}};
+    };
+};
+
+class PREPROCESSFILE
+{
+    class SYNTAX1
+    {
+        targets[] = {0,1,0};
+        args[] = {{},{"STRING"}};
+    };
+};
+
+class PREPROCESSFILELINENUMBERS
+{
+    class SYNTAX1
+    {
+        targets[] = {0,1,0};
+        args[] = {{},{"STRING"}};
+    };
+};
+
+class HINT
+{
+    class SYNTAX1
+    {
+        targets[] = {0,0,0};
+        args[] = {{},{"STRING","TEXT"}};
+    };
+};
+
+class CTRLCREATE
+{
+    class SYNTAX1
+    {
+        targets[] = {0,0,0};
+        args[] = {{"DISPLAY"},{"ARRAY"}};
     };
 };

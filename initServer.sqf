@@ -1,2 +1,2 @@
 if (!isServer) exitWith {};
-call compile PreprocessFileLineNumbers "\bountyhunters_server\init.sqf";
+call misc_fnc_init;
