@@ -24,21 +24,23 @@ if !(onKeydownCooldown) then {
                 };
             };
             if (cursorObject in (nearTrees + nearBushes)) then {
-                {
-                    if (_x find cursorObject != -1) then {
-                        if (player distance cursorObject < 5) then {
-                            _plant = _x;
-                            _plant pushBack servertime;
-                            _plant remoteExecCall ["farming_fnc_harvestPlant", 2];
+                if (animationState player == "amovpercmstpsnonwnondnon") then {
+                    {
+                        if (_x find cursorObject != -1) then {
+                            if (player distance cursorObject < 5) then {
+                                _plant = _x;
+                                _plant pushBack servertime;
+                                _plant remoteExecCall ["farming_fnc_harvestPlant", 2];
+                            };
                         };
-                    };
-                } forEach (nearFarmableBushes);
-                {
-                    if (_x find cursorObject != -1) then {
-                        hint str _x;
-                        player playmove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
-                    };
-                } forEach (nearFarmableTrees);
+                    } forEach (nearFarmableBushes);
+                    {
+                        if (_x find cursorObject != -1) then {
+                            hint str _x;
+                            player playmove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
+                        };
+                    } forEach (nearFarmableTrees);
+                };
             };
         };
         case (0x21): {
