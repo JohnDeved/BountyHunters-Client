@@ -64,3 +64,8 @@ class CfgRemoteExec
 {
 	#include ".\config\RemoteExec.h"
 };
+
+class CfgDisabledCommands
+{
+    #include ".\config\DisabledCommands.h"
+};
