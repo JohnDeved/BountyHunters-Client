@@ -27,7 +27,9 @@ if !(onKeydownCooldown) then {
                 {
                     if (_x find cursorObject != -1) then {
                         if (player distance cursorObject < 5) then {
-                            _x remoteExecCall ["farming_fnc_harvestPlant", 2];
+                            _plant = _x;
+                            _plant pushBack servertime;
+                            _plant remoteExecCall ["farming_fnc_harvestPlant", 2];
                         };
                     };
                 } forEach (nearFarmableBushes);
