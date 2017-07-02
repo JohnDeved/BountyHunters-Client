@@ -11,6 +11,12 @@ class Functions {
     class payment_fnc_gunShop {
         allowedTargets = 2;
     };
+    class farming_fnc_updatePlant {
+        allowedTargets = 2;
+    };
+    class farming_fnc_harvestPlant {
+        allowedTargets = 2;
+    };
 };
 
 class Commands {
