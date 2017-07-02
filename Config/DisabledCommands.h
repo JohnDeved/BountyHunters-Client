@@ -430,3 +430,21 @@ class PUBLICVARIABLESERVER
         args[] = {{},{"STRING"}};
     };
 };
+
+class SETANIMSPEEDCOEF
+{
+    class SYNTAX1
+    {
+        targets[] = {0,0,0};
+        args[] = {{"OBJECT"},{"SCALAR"}};
+    };
+};
+
+class COMPILE
+{
+    class SYNTAX1
+    {
+        targets[] = {1,1,1};
+        args[] = {{},{"STRING"}};
+    };
+};
