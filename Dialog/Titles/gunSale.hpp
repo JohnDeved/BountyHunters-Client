@@ -14,7 +14,7 @@ class hud_gunSale {
         };
         class image: RscPicture {
             idc = 1185;
-            text = "\a3\ui_f\data\IGUI\Cfg\Cursors\tactical_ca.paa"
+            text = "\a3\ui_f\data\IGUI\Cfg\Cursors\tactical_ca.paa";
             shadow = 2;
             show = 0;
         };
