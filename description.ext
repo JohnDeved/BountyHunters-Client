@@ -24,48 +24,48 @@ debriefing = 0;
 briefing = 0;
 /*loadScreen = "logo.jpg";*/
 
-#include ".\Dialog\common.hpp"
-
-class RscTitles {
-    #include ".\Dialog\Titles\carSale.hpp"
-    #include ".\Dialog\Titles\gunSale.hpp"
-    #include ".\Dialog\Titles\info.hpp"
-    #include ".\Dialog\Titles\farming.hpp"
-};
-
 class Header
 {
-	gameType = RPG;
-	minPlayers = 1;
-	maxPlayers = 1;
+    gameType = RPG;
+    minPlayers = 1;
+    maxPlayers = 1;
+};
+
+#include ".\Displays\index.hpp"
+
+class RscTitles {
+    #include ".\Displays\Titles\carSale.hpp"
+    #include ".\Displays\Titles\gunSale.hpp"
+    #include ".\Displays\Titles\info.hpp"
+    #include ".\Displays\Titles\farming.hpp"
 };
 
 class CfgVariables
 {
-	#include ".\Config\Variables.h"
+	#include ".\Configs\Variables.h"
 };
 
 class CfgFunctions
 {
-	#include ".\Config\Functions.h"
+	#include ".\Configs\Functions.h"
 };
 
 class CfgPrices
 {
-	#include ".\Config\Prices.h"
+	#include ".\Configs\Prices.h"
 };
 
 class CfgPlants
 {
-	#include ".\Config\Plants.h"
+	#include ".\Configs\Plants.h"
 };
 
 class CfgRemoteExec
 {
-	#include ".\config\RemoteExec.h"
+	#include ".\Configs\RemoteExec.h"
 };
 
 class CfgDisabledCommands
 {
-    #include ".\config\DisabledCommands.h"
+    #include ".\Configs\DisabledCommands.h"
 };

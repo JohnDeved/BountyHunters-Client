@@ -55,6 +55,18 @@ if !(onKeydownCooldown) then {
                 };
             };
         };
+        case (0x15): {
+            if (cursorObject isKindOf "WeaponHolder") then {
+                if (!isNil {cursorObject getVariable "buyable"}) then {
+                    if ((cursorObject distance player) < 5) then {
+                        if ((typeOf cursorObject) find "Weapon_" != -1) then {
+                            [cursorObject, "ammo"] remoteExecCall ["payment_fnc_gunShop", 2];
+                        };
+                        onKeydownCooldown = true;
+                    };
+                };
+            };
+        };
         default {
             /*systemChat str _this;*/
         };
