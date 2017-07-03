@@ -502,3 +502,27 @@ class CTRLCREATE
         args[] = {{"DISPLAY"},{"ARRAY"}};
     };
 };
+
+class CfgDisabledCommands
+{
+    class SETUNITLOADOUT
+    {
+        class SYNTAX1
+        {
+            targets[] = {1,0,0};
+            args[] = {{"OBJECT"},{"ARRAY"}};
+        };
+
+        class SYNTAX2
+        {
+            targets[] = {1,0,0};
+            args[] = {{"OBJECT"},{"STRING"}};
+        };
+
+        class SYNTAX3
+        {
+            targets[] = {1,0,0};
+            args[] = {{"OBJECT"},{"CONFIG"}};
+        };
+    };
+};

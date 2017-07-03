@@ -24,7 +24,7 @@ if !(onKeydownCooldown) then {
                 };
             };
             if (cursorObject in (nearTrees + nearBushes)) then {
-                if (animationState player == "amovpercmstpsnonwnondnon") then {
+                if (animationState player in ["amovpercmstpsnonwnondnon", "amovpercmstpsraswrfldnon", "amovpercmstpsraswpstdnon"]) then {
                     {
                         if (_x find cursorObject != -1) then {
                             if (player distance cursorObject < 5) then {
