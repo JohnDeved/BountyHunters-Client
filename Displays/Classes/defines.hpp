@@ -6,7 +6,6 @@
 
 class BountyHunters_Background: RscBackground
 {
-	shadow = 1;
 	text = "";
 	ColorBackground[] = darkgrey;
 	ColorText[] = {0.1,0.1,0.1,1};
@@ -19,6 +18,6 @@ class BountyHunters_Frame: RscFrame
 	idc = -1;
 	deletable = 0;
 	style = ST_FRAME;
-	shadow = 0;
+	shadow = 1;
 	colorText[] = white;
 };
