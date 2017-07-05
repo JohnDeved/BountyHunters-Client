@@ -12,7 +12,6 @@ _totalWeigth = 0;
             _className = configName _x;
         };
     } forEach ("true" configClasses (missionConfigFile >> "CfgPlants" >> "Bushes"));
-    systemChat _className;
     _itemWeigth = getNumber (missionConfigFile >> "CfgPlants" >> "Bushes" >> _className >> "weigth");
     _itemWeigth = _itemWeigth * _count;
     _totalWeigth = _totalWeigth + _itemWeigth;
