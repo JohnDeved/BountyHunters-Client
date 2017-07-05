@@ -60,6 +60,11 @@ class CfgPlants
 	#include ".\Configs\Plants.h"
 };
 
+class CfgCloting
+{
+	#include ".\Configs\Clothing.h"
+};
+
 class CfgRemoteExec
 {
 	#include ".\Configs\RemoteExec.h"

@@ -4,6 +4,7 @@ class Bushes
     {
         displayname = "Grape Vine";
         respawntime = 10;
+        weigth = .1;
         maxitems = 5;
         harvest = "Grapes";
     };
@@ -11,6 +12,7 @@ class Bushes
     {
         displayname = "Fig Bush";
         respawntime = 10;
+        weigth = .1;
         maxitems = 5;
         harvest = "Figs";
     };
@@ -18,20 +20,23 @@ class Bushes
     {
         displayname = "Oleander Pink";
         respawntime = 10;
+        weigth = .1;
         maxitems = 5;
-        harvest = "Medical Item(1)";
+        harvest = "Oleander Pink Flowers";
     };
     class b_neriumo2s_white_f
     {
         displayname = "Oleander White";
         respawntime = 10;
+        weigth = .1;
         maxitems = 5;
-        harvest = "Medical Item(2)";
+        harvest = "Oleander White Flowers";
     };
     class b_opuntiaficusindica3s_f
     {
         displayname = "Cactus";
         respawntime = 10;
+        weigth = .1;
         maxitems = 5;
         harvest = "Cactus";
     };
