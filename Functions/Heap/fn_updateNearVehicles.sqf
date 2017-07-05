@@ -4,10 +4,15 @@ if (!isNil {nearVehicles}) then {
         _nearBuyableVehicles = [];
         {
             if (!isNil {_x getVariable "buyable"}) then {
-                _name = getText (configFile >>  "CfgVehicles" >>  typeOf _x >> "displayName");
-                _price = getNumber (missionConfigFile >>  "CfgPrices" >> "Vehicles" >> typeOf _x >> "price");
-                _height = getNumber (missionConfigFile >>  "CfgPrices" >> "Vehicles" >> typeOf _x >> "height");
-                _nearBuyableVehicles pushBack [_x, _name, _price, _height];
+                _veh = _x;
+                {
+                    if ((typeOf _veh) isEqualTo (configName _x)) then {
+                        _name = getText (configFile >>  "CfgVehicles" >>  typeOf _veh >> "displayName");
+                        _price = getNumber (missionConfigFile >>  "CfgPrices" >> "Vehicles" >> typeOf _veh >> "price");
+                        _height = getNumber (missionConfigFile >>  "CfgPrices" >> "Vehicles" >> typeOf _veh >> "height");
+                        _nearBuyableVehicles pushBack [_veh, _name, _price, _height];
+                    };
+                } forEach ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Vehicles"));
             };
         } forEach nearVehicles;
         nearBuyableVehicles = _nearBuyableVehicles;
