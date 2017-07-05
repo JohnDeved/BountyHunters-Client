@@ -7,6 +7,7 @@ class Misc_functions
 		class defineSync {};
 		class defineAsync {};
 		class autoInit {};
+		class getTotalWeigth {};
 	};
 };
 class EventHandler_functions

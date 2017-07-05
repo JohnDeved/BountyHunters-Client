@@ -60,7 +60,7 @@ class CfgPlants
 	#include ".\Configs\Plants.h"
 };
 
-class CfgCloting
+class CfgClothing
 {
 	#include ".\Configs\Clothing.h"
 };

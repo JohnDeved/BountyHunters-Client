@@ -21,14 +21,14 @@ params ["_display"];
                 _ctrl tvAdd [[_forEachIndex], ("Weight: " + str (_weight * _count) + "kg")];
             } forEach vItems;
         };
+        case (1101): {
+            _ctrl = _x;
+            _weigths = call misc_fnc_getTotalWeigth;
+            if (_weigths isEqualTo []) exitWith {systemChat "couldnt get players total weigth!"};
+            _curretWeigth = _weigths select 0;
+            _maxWeigth = _weigths select 1;
+            _ctrl ctrlSetStructuredText parseText ("<t font='PuristaMedium' shadow='2' size='1.3'>Inventory [" + str _curretWeigth + "/" + str _maxWeigth + "kg]</t>")
+        };
         default {};
     };
 } forEach allControls _display;
-
-/*
-_CT_TREE tvAdd [ [],"Parent_A"];
-_CT_TREE tvAdd [ [0],"Child_A"];
-_CT_TREE tvAdd [ [0,0],"Grandchild_A"];
-_CT_TREE tvAdd [ [],"Parent_B"];
-_CT_TREE tvAdd [ [1],"Child_B"];
-*/
