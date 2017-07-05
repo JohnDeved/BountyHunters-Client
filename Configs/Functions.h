@@ -33,6 +33,15 @@ class Hud_functions
 		class info {};
 	};
 };
+class Dialog_functions
+{
+	tag = "dialog";
+	class Dialog
+	{
+		file = "Functions\Dialog";
+		class playerMenu {};
+	};
+};
 class Draw_functions
 {
 	tag = "draw";

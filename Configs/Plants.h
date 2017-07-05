@@ -5,30 +5,35 @@ class Bushes
         displayname = "Grape Vine";
         respawntime = 10;
         maxitems = 5;
+        harvest = "Grapes";
     };
     class b_ficusc2s_f
     {
         displayname = "Fig Bush";
         respawntime = 10;
         maxitems = 5;
+        harvest = "Figs";
     };
     class b_neriumo2s_f
     {
         displayname = "Oleander Pink";
         respawntime = 10;
         maxitems = 5;
+        harvest = "Medical Item(1)";
     };
     class b_neriumo2s_white_f
     {
         displayname = "Oleander White";
         respawntime = 10;
         maxitems = 5;
+        harvest = "Medical Item(2)";
     };
     class b_opuntiaficusindica3s_f
     {
         displayname = "Cactus";
         respawntime = 10;
         maxitems = 5;
+        harvest = "Cactus";
     };
 };
 
