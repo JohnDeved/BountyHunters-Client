@@ -9,17 +9,19 @@ params ["_display"];
                 _count = _x select 1;
                 _className = "";
                 {
-                    _harvest = getText (_x >> "harvest");
-                    if (_harvest isEqualTo _item) then {
+                    _vItemVar = getText (_x >> "variable");
+                    if (_vItemVar isEqualTo _item) then {
                         _className = configName _x;
                     };
-                } forEach ("true" configClasses (missionConfigFile >> "CfgPlants" >> "Bushes"));
-                _weight = getNumber (missionConfigFile >> "CfgPlants" >> "Bushes" >> _className >> "weigth");
+                } forEach ("true" configClasses (missionConfigFile >> "CfgPlants"));
+                _weight = getNumber (missionConfigFile >> "CfgPlants" >> _className >> "weigth");
+                _displayName = getText (missionConfigFile >> "CfgPlants" >> _className >> "displayname");
 
-                _ctrl tvAdd [[], _item];
+                _ctrl tvAdd [[], _displayName];
                 _ctrl tvAdd [[_forEachIndex], ("Amount: " + str _count)];
                 _ctrl tvAdd [[_forEachIndex], ("Weight: " + str (_weight * _count) + "kg")];
             } forEach vItems;
+            tvExpandAll _ctrl;
         };
         case (1101): {
             _ctrl = _x;

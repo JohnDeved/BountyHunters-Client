@@ -31,6 +31,7 @@ class Hud_functions
 		class carSale {};
 		class gunSale {};
 		class farming {};
+		class processor {};
 		class info {};
 	};
 };
@@ -53,6 +54,7 @@ class Draw_functions
 		class hudCarSale {};
 		class hudGunSale {};
 		class hudFarming {};
+		class hudProcessor {};
 	};
 };
 class Heap_functions
@@ -66,5 +68,6 @@ class Heap_functions
 		class updateNearVehicles {};
 		class updateNearWeapons {};
 		class updateNearStuff {};
+		class updateNearProcessors {};
 	};
 };

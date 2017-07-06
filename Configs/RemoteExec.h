@@ -17,6 +17,9 @@ class Functions {
     class farming_fnc_harvestPlant {
         allowedTargets = 2;
     };
+    class farming_fnc_processing {
+        allowedTargets = 2;
+    };
 };
 
 class Commands {
