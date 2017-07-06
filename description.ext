@@ -38,6 +38,7 @@ class RscTitles {
     #include ".\Displays\Titles\gunSale.hpp"
     #include ".\Displays\Titles\info.hpp"
     #include ".\Displays\Titles\farming.hpp"
+    #include ".\Displays\Titles\processor.hpp"
 };
 
 class CfgVariables
@@ -58,6 +59,16 @@ class CfgPrices
 class CfgPlants
 {
 	#include ".\Configs\Plants.h"
+};
+
+class CfgProcessors
+{
+	#include ".\Configs\Processors.h"
+};
+
+class CfgClothing
+{
+	#include ".\Configs\Clothing.h"
 };
 
 class CfgRemoteExec

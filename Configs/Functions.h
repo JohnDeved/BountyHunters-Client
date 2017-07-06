@@ -7,6 +7,7 @@ class Misc_functions
 		class defineSync {};
 		class defineAsync {};
 		class autoInit {};
+		class getTotalWeigth {};
 	};
 };
 class EventHandler_functions
@@ -30,7 +31,17 @@ class Hud_functions
 		class carSale {};
 		class gunSale {};
 		class farming {};
+		class processor {};
 		class info {};
+	};
+};
+class Dialog_functions
+{
+	tag = "dialog";
+	class Dialog
+	{
+		file = "Functions\Dialog";
+		class playerMenu {};
 	};
 };
 class Draw_functions
@@ -43,6 +54,7 @@ class Draw_functions
 		class hudCarSale {};
 		class hudGunSale {};
 		class hudFarming {};
+		class hudProcessor {};
 	};
 };
 class Heap_functions
@@ -56,5 +68,6 @@ class Heap_functions
 		class updateNearVehicles {};
 		class updateNearWeapons {};
 		class updateNearStuff {};
+		class updateNearProcessors {};
 	};
 };

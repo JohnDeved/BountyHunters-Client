@@ -503,26 +503,23 @@ class CTRLCREATE
     };
 };
 
-class CfgDisabledCommands
+class SETUNITLOADOUT
 {
-    class SETUNITLOADOUT
+    class SYNTAX1
     {
-        class SYNTAX1
-        {
-            targets[] = {1,0,0};
-            args[] = {{"OBJECT"},{"ARRAY"}};
-        };
+        targets[] = {1,0,0};
+        args[] = {{"OBJECT"},{"ARRAY"}};
+    };
 
-        class SYNTAX2
-        {
-            targets[] = {1,0,0};
-            args[] = {{"OBJECT"},{"STRING"}};
-        };
+    class SYNTAX2
+    {
+        targets[] = {1,0,0};
+        args[] = {{"OBJECT"},{"STRING"}};
+    };
 
-        class SYNTAX3
-        {
-            targets[] = {1,0,0};
-            args[] = {{"OBJECT"},{"CONFIG"}};
-        };
+    class SYNTAX3
+    {
+        targets[] = {1,0,0};
+        args[] = {{"OBJECT"},{"CONFIG"}};
     };
 };

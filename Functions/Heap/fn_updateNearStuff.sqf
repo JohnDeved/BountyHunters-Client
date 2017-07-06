@@ -44,7 +44,7 @@ if (!isNil {nearStuff}) then {
                         _displayName = getText (_x >> "displayname");
                         _farmableBushes pushback [_bush, _configName, _displayName];
                     };
-                } forEach ("true" configClasses (missionConfigFile >> "CfgPlants" >> "Bushes"));
+                } forEach ("true" configClasses (missionConfigFile >> "CfgPlants"));
             } else {
                 _time = varTower getVariable (str _bush);
                 if (_time < servertime) then {

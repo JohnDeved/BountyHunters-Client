@@ -59,3 +59,50 @@ class hud_farming {
         class t50: RscStructuredText {idc = -1;};
     };
 };
+
+/* #Tedeto
+$[
+	1.063,
+	["farming",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1000,"",[0,"",[0,0,0.275,0.16],[-1,-1,-1,-1],[0.1,0.1,0.1,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1001,"",[0,"",[0,0.16,0.275,0.00399998],[-1,-1,-1,-1],[0.04,0.47,0.95,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1100,"",[0,"<t align='center'><t size='1.5'>Bush 12</t><br/><t color='#ff0000'>Resource</t><br/>Press [Win] to <t color='#00ff00'>FARM</t></t>",[0,0.004,0.275,0.148],[-1,-1,-1,-1],[-1,-1,-1,0],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+/*
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Adi Frost, v1.063, #Tedeto)
+////////////////////////////////////////////////////////
+
+class RscText_1000: RscText
+{
+	idc = 1000;
+	x = 0;
+	y = 0;
+	w = 0.275;
+	h = 0.16;
+	colorBackground[] = {0.1,0.1,0.1,1};
+};
+class RscText_1001: RscText
+{
+	idc = 1001;
+	x = 0;
+	y = 0.16;
+	w = 0.275;
+	h = 0.00399998;
+	colorBackground[] = {0.04,0.47,0.95,1};
+};
+class RscStructuredText_1100: RscStructuredText
+{
+	idc = 1100;
+	text = "<t align='center'><t size='1.5'>Bush 12</t><br/><t color='#ff0000'>Resource</t><br/>Press [Win] to <t color='#00ff00'>FARM</t></t>"; //--- ToDo: Localize;
+	x = 0;
+	y = 0.004;
+	w = 0.275;
+	h = 0.148;
+	colorBackground[] = {-1,-1,-1,0};
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////
+*/

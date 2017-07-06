@@ -61,7 +61,7 @@ class Weapons
     };
 };
 
-class WeaponAttatchments
+class Attatchments
 {
     class Item_acc_flashlight_pistol
     {
