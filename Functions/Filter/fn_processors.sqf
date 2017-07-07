@@ -1,4 +1,3 @@
-nearProcessors = player nearObjects ["Land_InfoStand_V2_F", 10];
 _nearUseableProcessors = [];
 {
     if (!isNil {_x getVariable "processor"}) then {
@@ -13,5 +12,4 @@ _nearUseableProcessors = [];
         } forEach ("true" configClasses (missionConfigFile >> "CfgProcessors"));
     };
 } forEach nearProcessors;
-
-nearUseableProcessors = _nearUseableProcessors;
+_nearUseableProcessors

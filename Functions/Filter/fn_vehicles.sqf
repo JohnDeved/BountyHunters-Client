@@ -1,4 +1,3 @@
-nearVehicles = player nearObjects ["LandVehicle", 20];
 if (!isNil {nearVehicles}) then {
     if !(nearVehicles isEqualTo []) then {
         _nearBuyableVehicles = [];
@@ -15,8 +14,8 @@ if (!isNil {nearVehicles}) then {
                 } forEach ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Vehicles"));
             };
         } forEach nearVehicles;
-        nearBuyableVehicles = _nearBuyableVehicles;
+        _nearBuyableVehicles
     } else {
-        nearBuyableVehicles = [];
+        []
     };
 };

@@ -65,9 +65,18 @@ class Heap_functions
 		file = "Functions\Heap";
 		// !- auto exec
 		class updateInfo {};
-		class updateNearVehicles {};
-		class updateNearWeapons {};
-		class updateNearStuff {};
-		class updateNearProcessors {};
+		class updateNearObjects {};
+	};
+};
+class Filter_functions
+{
+	tag = "filter";
+	class Filter
+	{
+		file = "Functions\Filter";
+		class bushes {};
+		class processors {};
+		class vehicles {};
+		class weapons {};
 	};
 };

@@ -1,4 +1,3 @@
-nearWeapons = player nearObjects ["WeaponHolder",8];
 if (!isNil {nearWeapons}) then {
     if !(nearWeapons isEqualTo []) then {
         _nearBuyableWeapons = [];
@@ -25,8 +24,8 @@ if (!isNil {nearWeapons}) then {
                 } forEach (_weaponsConfig + _attatchmentsConfig);
             };
         } forEach nearWeapons;
-        nearBuyableWeapons = _nearBuyableWeapons;
+        _nearBuyableWeapons
     } else {
-        nearBuyableWeapons = [];
+        []
     };
 };
