@@ -34,25 +34,28 @@ if !(onKeydownCooldown) then {
                 };
                 case (cursorObject in (nearTrees + nearBushes)): {
                     if (animationState player in ["amovpercmstpsnonwnondnon", "amovpercmstpsraswrfldnon", "amovpercmstpsraswpstdnon"]) then {
-                        {
-                            if (_x find cursorObject != -1) then {
-                                if (player distance cursorObject < 5) then {
-                                    _plant = _x;
-                                    _plant pushBack servertime;
-                                    _plant remoteExecCall ["farming_fnc_harvestPlant", 2];
+                        if (player distance cursorObject < 5) then {
+                            {
+                                if (_x find cursorObject != -1) then {
+                                        _plant = _x;
+                                        _plant pushBack servertime;
+                                        _plant remoteExecCall ["farming_fnc_harvestPlant", 2];
+
                                 };
-                            };
-                        } forEach (nearFarmableBushes);
-                        {
-                            if (_x find cursorObject != -1) then {
-                                hint str _x;
-                                player playmove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
-                            };
-                        } forEach (nearFarmableTrees);
+                            } forEach (nearFarmableBushes);
+                            {
+                                if (_x find cursorObject != -1) then {
+                                    hint str _x;
+                                    player playmove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
+                                };
+                            } forEach (nearFarmableTrees);
+                        };
                     };
                 };
                 case (cursorTarget in nearProcessors): {
-                    systemChat ("processor: " + str cursorTarget);
+                    if (player distance cursorObject < 5) then {
+                        [cursorObject] remoteExecCall ["farming_fnc_processing", 2];
+                    };
                 };
                 default {};
             };

@@ -1,6 +1,8 @@
 class b_vitis_vinifera_f
 {
-    processinput =
+    processinput = "vItem_Grapes";
     processtime = 10;
-    processreturn = "Wine";
+    displayname = "Wine";
+    processinputammount = 5;
+    variable = "vItem_Wine";
 };

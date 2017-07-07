@@ -66,6 +66,11 @@ class CfgProcessors
 	#include ".\Configs\Processors.h"
 };
 
+class CfgvItems
+{
+	#include ".\Configs\vItems.h"
+};
+
 class CfgClothing
 {
 	#include ".\Configs\Clothing.h"

@@ -7,15 +7,8 @@ params ["_display"];
             {
                 _item = _x select 0;
                 _count = _x select 1;
-                _className = "";
-                {
-                    _vItemVar = getText (_x >> "variable");
-                    if (_vItemVar isEqualTo _item) then {
-                        _className = configName _x;
-                    };
-                } forEach ("true" configClasses (missionConfigFile >> "CfgPlants"));
-                _weight = getNumber (missionConfigFile >> "CfgPlants" >> _className >> "weigth");
-                _displayName = getText (missionConfigFile >> "CfgPlants" >> _className >> "displayname");
+                _weight = getNumber (missionConfigFile >> "CfgvItems" >> _item >> "weigth");
+                _displayName = getText (missionConfigFile >> "CfgvItems" >> _item >> "displayname");
 
                 _ctrl tvAdd [[], _displayName];
                 _ctrl tvAdd [[_forEachIndex], ("Amount: " + str _count)];

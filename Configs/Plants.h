@@ -2,46 +2,36 @@ class b_vitis_vinifera_f
 {
     displayname = "Grape Vine";
     respawntime = 300;
-    weigth = 2.7;
     maxitems = 5;
-    harvest = "Grapes";
-    variable = "vItem_Grapes"
+    harvest = "vItem_Grapes";
 };
 class b_ficusc2s_f
 {
     displayname = "Fig Bush";
     respawntime = 300;
-    weigth = 2.7;
     maxitems = 5;
-    harvest = "Figs";
-    variable = "vItem_Figs"
+    harvest = "vItem_Figs";
 };
 class b_neriumo2s_f
 {
     displayname = "Oleander Pink";
     respawntime = 300;
-    weigth = 2.7;
     maxitems = 5;
-    harvest = "Oleander Pink Flowers";
-    variable = "vItem_OleanderPink"
+    harvest = "vItem_OleanderPink";
 };
 class b_neriumo2s_white_f
 {
     displayname = "Oleander White";
     respawntime = 300;
-    weigth = 2.7;
     maxitems = 5;
-    harvest = "Oleander White Flowers";
-    variable = "vItem_OleanderWhite"
+    harvest = "vItem_OleanderWhite";
 };
 class b_opuntiaficusindica3s_f
 {
     displayname = "Cactus";
     respawntime = 300;
-    weigth = 2.7;
     maxitems = 5;
-    harvest = "Cactus";
-    variable = "vItem_Cactus"
+    harvest = "vItem_Cactus";
 };
 
 class t_oleae1s_f
