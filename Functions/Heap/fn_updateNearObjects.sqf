@@ -1,4 +1,4 @@
-nearObjs = nearestObjects [player, [], 20];
+nearObjs = nearestObjects [player, [], 50];
 
 if (!isNil {nearObjs}) then {
 
