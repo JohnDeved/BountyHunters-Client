@@ -18,16 +18,26 @@ if !(onKeydownCooldown) then {
                 case (cursorObject in nearWeapons): {
                     if (!isNil {cursorObject getVariable "buyable"}) then {
                         if ((cursorObject distance player) < 5) then {
+                            _weaponsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Weapons"));
+                            _attatchmentsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Attatchments"));
+                            _clothingConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Clothing"));
+                            _headGearConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "HeadGear"));
                             {
                                 if ((configName _x) isEqualTo (typeOf cursorObject)) then {
-                                    [cursorObject, "weapon"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                    if (_x in _weaponsConfig) then {
+                                        [cursorObject, "weapon"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                    };
+                                    if (_x in _attatchmentsConfig) then {
+                                        [cursorObject, "attatchment"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                    };
+                                    if (_x in _clothingConfig) then {
+                                        [cursorObject, "clothing"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                    };
+                                    if (_x in _headGearConfig) then {
+                                        [cursorObject, "headgear"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                    };
                                 };
-                            } forEach ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Weapons"));
-                            {
-                                if ((configName _x) isEqualTo (typeOf cursorObject)) then {
-                                    [cursorObject, "attatchment"] remoteExecCall ["payment_fnc_gunShop", 2];
-                                };
-                            } forEach ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Attatchments"));
+                            } forEach (_weaponsConfig + _attatchmentsConfig + _clothingConfig + _headGearConfig);
                             onKeydownCooldown = true;
                         };
                     };

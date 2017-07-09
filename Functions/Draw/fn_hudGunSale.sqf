@@ -57,6 +57,14 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                                     _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>ATTATCHMENT</t><br/><t color='#00ff00'>$" + str _price + "</t><br/>Press [Win] to <t color='#00ff00'>BUY</t></t>");
                                     _x ctrlSetFade 0;
                                 };
+                                if (_type == "clothing") then {
+                                    _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>CLOTHING</t><br/><t color='#00ff00'>$" + str _price + "</t><br/>Press [Win] to <t color='#00ff00'>BUY</t></t>");
+                                    _x ctrlSetFade 0;
+                                };
+                                if (_type == "headgear") then {
+                                    _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>HEADGEAR</t><br/><t color='#00ff00'>$" + str _price + "</t><br/>Press [Win] to <t color='#00ff00'>BUY</t></t>");
+                                    _x ctrlSetFade 0;
+                                };
                             } else {
                                 _x ctrlSetStructuredText parseText ("<t align='center'>" + _name + "<br/><t color='#ff0000'>For Sale!</t><br/><t color='#00ff00'>$" + str _price + "</t></t>");
                                 _x ctrlSetFade 0;

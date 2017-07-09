@@ -7,6 +7,8 @@ if (!isNil {nearWeapons}) then {
                 _item = _x;
                 _weaponsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Weapons"));
                 _attatchmentsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Attatchments"));
+                _clothingConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Clothing"));
+                _headGearConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "HeadGear"));
                 {
                     if ((typeOf _item) isEqualTo (configName _x)) then {
                         if (_x in _weaponsConfig) then {
@@ -20,8 +22,18 @@ if (!isNil {nearWeapons}) then {
                             _type = "attatchment";
                             _nearBuyableWeapons pushBack [_item, _name, _type, _price];
                         };
+                        if (_x in _clothingConfig) then {
+                            _price = getNumber (missionConfigFile >>  "CfgPrices" >> "Clothing" >> typeOf _item >> "price");
+                            _type = "clothing";
+                            _nearBuyableWeapons pushBack [_item, _name, _type, _price];
+                        };
+                        if (_x in _headGearConfig) then {
+                            _price = getNumber (missionConfigFile >>  "CfgPrices" >> "HeadGear" >> typeOf _item >> "price");
+                            _type = "headgear";
+                            _nearBuyableWeapons pushBack [_item, _name, _type, _price];
+                        };
                     };
-                } forEach (_weaponsConfig + _attatchmentsConfig);
+                } forEach (_weaponsConfig + _attatchmentsConfig + _clothingConfig + _headGearConfig);
             };
         } forEach nearWeapons;
         _nearBuyableWeapons

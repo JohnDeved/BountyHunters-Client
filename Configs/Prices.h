@@ -80,3 +80,63 @@ class Attatchments
         price = 500;
     };
 };
+
+class Clothing
+{
+    class Item_U_C_Poor_1
+    {
+        price = 500;
+    };
+    class Item_U_C_Poloshirt_stripped
+    {
+        price = 1000;
+    };
+    class Item_U_C_Poloshirt_salmon
+    {
+        price = 1000;
+    };
+    class Item_U_BG_Guerilla1_1
+    {
+        price = 1000;
+    };
+    class Item_U_C_Poloshirt_tricolour
+    {
+        price = 1000;
+    };
+    class Item_U_C_Poloshirt_burgundy
+    {
+        price = 1000;
+    };
+    class Item_U_C_HunterBody_grn
+    {
+        price = 1000;
+    };
+    class Item_U_C_Poloshirt_redwhite
+    {
+        price = 1000;
+    };
+    class Item_U_C_Poloshirt_blue
+    {
+        price = 1000;
+    };
+};
+
+class HeadGear
+{
+    class Headgear_H_Cap_grn
+    {
+        price = 500;
+    }
+    class Headgear_H_Cap_press
+    {
+        price = 500;
+    }
+    class Headgear_H_Cap_brn_SPECOPS
+    {
+        price = 500;
+    }
+    class Headgear_H_StrawHat
+    {
+        price = 500;
+    }
+}
