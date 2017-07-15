@@ -1,6 +1,5 @@
 _return = [];
-_backpack = backpack player;
-_maxWeigth = getNumber (missionConfigFile >> "CfgClothing" >> "Backpacks" >> _backpack >> "carryweigth");
+_maxWeigth = call misc_fnc_getMaxWeigth;
 _totalWeigth = 0;
 {
     _item = _x select 0;
