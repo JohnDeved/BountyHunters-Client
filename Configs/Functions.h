@@ -8,6 +8,8 @@ class Misc_functions
 		class defineAsync {};
 		class autoInit {};
 		class getTotalWeigth {};
+		class getMaxWeigth {};
+		class getSimpleObjectClass {};
 	};
 };
 class EventHandler_functions
@@ -17,6 +19,7 @@ class EventHandler_functions
 	{
 		file = "Functions\EventHandler";
 		class onKeyDown {};
+		class onKeyUp {};
 		class onHeapStack {};
 		class onDraw {};
 	};
@@ -42,6 +45,7 @@ class Dialog_functions
 	{
 		file = "Functions\Dialog";
 		class playerMenu {};
+		class actionKey {};
 	};
 };
 class Draw_functions
