@@ -7,16 +7,26 @@ class hud_gunSale {
 
     class controls
     {
-        class background: RscBackground {
+        class background: RscBackground
+        {
             colorBackground[] = {0,0,0,0};
             idc = 1184;
             show = 0;
         };
-        class image: RscPicture {
+        class image: RscPicture
+        {
             idc = 1185;
             text = "\a3\ui_f\data\IGUI\Cfg\Cursors\tactical_ca.paa";
             shadow = 2;
             show = 0;
+        };
+        class text1: RscStructuredText
+        {
+            idc = 1186;
+        };
+        class text2: RscStructuredText
+        {
+            idc = 1187;
         };
         class t1: RscStructuredText {idc = -1;};
         class t2: RscStructuredText {idc = -1;};

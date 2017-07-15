@@ -21,6 +21,9 @@ if (!isNil {nearObjs}) then {
             case (_name find ": t_" != -1): {
                 _trees pushBack _x;
             };
+            case (_name find "NOID backpack_" != -1): {
+                _weapons pushBack _x;
+            };
             case (_x isKindOf "LandVehicle"): {
                 _vehicles pushBack _x;
             };

@@ -1,0 +1,23 @@
+loading circle
+E:\SteamLibrary\steamapps\common\Arma 3\Addons\ui_f_data\igui\cfg\holdactions
+\a3\ui_f\data\igui\cfg\holdactions
+
+ammo icon
+E:\SteamLibrary\steamapps\common\Arma 3\Addons\ui_f_data\igui\cfg\cursors\iconrearmat_ca.paa
+\a3\ui_f\data\igui\cfg\cursors\iconrearmat_ca.paa
+
+fuel icon
+E:\SteamLibrary\steamapps\common\Arma 3\Addons\ui_f_data\igui\cfg\cursors\iconrefuelat_ca.paa
+\a3\ui_f\data\igui\cfg\cursors\iconrearmat_ca.paa
+
+repair icon
+E:\SteamLibrary\steamapps\common\Arma 3\Addons\ui_f_data\igui\cfg\cursors\iconrearmat_ca.paa
+\a3\ui_f\data\igui\cfg\cursors\iconrepairat_ca.paa
+
+waypoint arrow
+E:\SteamLibrary\steamapps\common\Arma 3\Addons\ui_f_data\igui\cfg\cursors\iconrearmat_ca.paa
+\a3\ui_f\data\igui\cfg\cursors\waypointmark_ca.paa
+
+arsenal icons
+E:\SteamLibrary\steamapps\common\Arma 3\Addons\ui_f_data\gui\rsc\rscdisplayarsenal
+\a3\ui_f\data\gui\rsc\rscdisplayarsenal

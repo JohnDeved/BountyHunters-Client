@@ -86,38 +86,47 @@ class Clothing
     class Item_U_C_Poor_1
     {
         price = 500;
+        heigth = .1;
     };
     class Item_U_C_Poloshirt_stripped
     {
         price = 1000;
+        heigth = .1;
     };
     class Item_U_C_Poloshirt_salmon
     {
         price = 1000;
+        heigth = .1;
     };
     class Item_U_BG_Guerilla1_1
     {
         price = 1000;
+        heigth = .1;
     };
     class Item_U_C_Poloshirt_tricolour
     {
         price = 1000;
+        heigth = .1;
     };
     class Item_U_C_Poloshirt_burgundy
     {
         price = 1000;
+        heigth = .1;
     };
     class Item_U_C_HunterBody_grn
     {
         price = 1000;
+        heigth = .1;
     };
     class Item_U_C_Poloshirt_redwhite
     {
         price = 1000;
+        heigth = .1;
     };
     class Item_U_C_Poloshirt_blue
     {
         price = 1000;
+        heigth = .1;
     };
 };
 
@@ -139,4 +148,33 @@ class HeadGear
     {
         price = 500;
     }
-}
+};
+
+class Backpacks
+{
+    class B_Carryall_cbr
+    {
+        price = 5000;
+        heigth = .25;
+    };
+    class B_TacticalPack_blk
+    {
+        price = 5000;
+        heigth = .25;
+    };
+    class B_FieldPack_cbr
+    {
+        price = 5000;
+        heigth = .25;
+    };
+    class B_Kitbag_cbr
+    {
+        price = 5000;
+        heigth = .25;
+    };
+    class B_AssaultPack_rgr
+    {
+        price = 5000;
+        heigth = .25;
+    };
+};
