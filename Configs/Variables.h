@@ -31,4 +31,8 @@ class Async
     {
         val = 0;
     };
+    class actionKeyPressed
+    {
+        val = 0;
+    };
 };

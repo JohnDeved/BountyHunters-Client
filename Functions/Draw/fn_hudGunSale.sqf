@@ -47,36 +47,26 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                         _x ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _x) / 1.5), .5, ctrlTextHeight _x];
                         if (cursorObject == _item) then {
                             if ((_item distance player) < 3) then {
-
-                                /*_xOffset = .25;
-                                _yOffset = .10;
-                                _boxWidth = .5;
-                                _boxHeight = ctrlTextHeight _x;
-
-                                _x1 = _sPos select 0;
-                                _y1 = _sPos select 1;
-
-                                _x2 = _x1 - _xOffset;
-                                _y2 = _y1 - (_boxHeight + _yOffset);
-
-                                _x ctrlSetPosition [_x2, _y2, _boxWidth, _boxHeight];*/
-
                                 _selectIcon = "";
-                                switch (keyPressed) do {
-                                    case (0xDB): {
-                                        _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\progress2\progress_" + str loadingCount + "_ca.paa";
-                                    };
-                                    case (0x21): {
-                                        if (_type == "weapon") then {
+                                if (actionKeyPressed == 1) then {
+                                    switch (keyPressed) do {
+                                        case (0xDB): {
                                             _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\progress2\progress_" + str loadingCount + "_ca.paa";
-                                            _icon = "\a3\ui_f\data\igui\cfg\cursors\iconrearmat_ca.paa";
-                                        } else {
+                                        };
+                                        case (0x21): {
+                                            if (_type == "weapon") then {
+                                                _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\progress2\progress_" + str loadingCount + "_ca.paa";
+                                                _icon = "\a3\ui_f\data\igui\cfg\cursors\iconrearmat_ca.paa";
+                                            } else {
+                                                _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\idle\idle_" + str idleLoadingCount + "_ca.paa";
+                                            };
+                                        };
+                                        default {
                                             _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\idle\idle_" + str idleLoadingCount + "_ca.paa";
                                         };
                                     };
-                                    default {
-                                        _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\idle\idle_" + str idleLoadingCount + "_ca.paa";
-                                    };
+                                } else {
+                                    _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\idle\idle_" + str idleLoadingCount + "_ca.paa";
                                 };
 
                                 _text ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _text) / 2), .5, ctrlTextHeight _text];

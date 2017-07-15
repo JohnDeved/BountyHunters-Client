@@ -21,7 +21,7 @@ if !(onKeydownCooldown) then {
                         if (!isNil {cursorObject getVariable "buyable"} || isSimpleObject cursorObject) then {
                             if ((cursorObject distance player) < 5) then {
                                 onKeydownCooldown = true;
-                                [_key, .5, {
+                                [cursorObject, _key, .5, {
                                     _weaponsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Weapons"));
                                     _attatchmentsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Attatchments"));
                                     _clothingConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Clothing"));
@@ -90,7 +90,7 @@ if !(onKeydownCooldown) then {
                         if ((cursorObject distance player) < 5) then {
                             onKeydownCooldown = true;
                             if ((typeOf cursorObject) find "Weapon_" != -1) then {
-                                [_key, .5, {
+                                [cursorObject, _key, .5, {
                                     [cursorObject, "ammo"] remoteExecCall ["payment_fnc_gunShop", 2];
                                 }] spawn dialog_fnc_actionKey;
                             };
