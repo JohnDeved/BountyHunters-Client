@@ -1,7 +1,8 @@
-class Backpacks
+class None
 {
-    class B_Carryall_cbr
-    {
-        carryweigth = 90;
-    }
-}
+    carryweigth = 15;
+};
+class B_Carryall_cbr
+{
+    carryweigth = 90;
+};
