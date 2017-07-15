@@ -15,5 +15,20 @@ class Sync
 };
 class Async
 {
-
+    class heapCount
+    {
+        val = 0;
+    };
+    class loadingCount
+    {
+        val = 0;
+    };
+    class idleLoadingCount
+    {
+        val = 0;
+    };
+    class keyPressed
+    {
+        val = 0;
+    };
 };
