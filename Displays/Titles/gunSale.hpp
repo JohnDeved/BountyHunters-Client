@@ -28,6 +28,10 @@ class hud_gunSale {
         {
             idc = 1187;
         };
+        class text3: RscStructuredText
+        {
+            idc = 1188;
+        };
         class t1: RscStructuredText {idc = -1;};
         class t2: RscStructuredText {idc = -1;};
         class t3: RscStructuredText {idc = -1;};

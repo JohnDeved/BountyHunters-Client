@@ -9,6 +9,8 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
     _text ctrlShow false;
     _select = _ui displayCtrl 1187;
     _select ctrlShow false;
+    _info = _ui displayCtrl 1188;
+    _info ctrlShow false;
     {
         if (ctrlIDC _x == -1) then {
             if ((count nearBuyableWeapons)-1 >= _forEachIndex) then {
@@ -58,26 +60,41 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                                                 _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\progress2\progress_" + str loadingCount + "_ca.paa";
                                                 _icon = "\a3\ui_f\data\igui\cfg\cursors\iconrearmat_ca.paa";
                                             } else {
-                                                _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\idle\idle_" + str idleLoadingCount + "_ca.paa";
+                                                _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\progress2\progress_0_ca.paa";
                                             };
                                         };
                                         default {
-                                            _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\idle\idle_" + str idleLoadingCount + "_ca.paa";
+                                            _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\progress2\progress_0_ca.paa";
                                         };
                                     };
                                 } else {
-                                    _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\idle\idle_" + str idleLoadingCount + "_ca.paa";
+                                    _selectIcon = "\a3\ui_f\data\igui\cfg\holdactions\progress2\progress_0_ca.paa";
                                 };
 
-                                _text ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _text) / 2), .5, ctrlTextHeight _text];
-                                _text ctrlSetStructuredText parseText ("<t align='center' shadow='2' size='2'><img image='\a3\ui_f\data\igui\cfg\holdactions\in\in_3_ca.paa'/></t>");
-                                _text ctrlCommit 0;
-                                _text ctrlShow true;
-
-                                _select ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _text) / 2), .5, ctrlTextHeight _text];
+                                _select ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _select) / 2), .5, ctrlTextHeight _select];
                                 _select ctrlSetStructuredText parseText ("<t align='center' shadow='2' size='2'><img image='" + _selectIcon + "'/></t>");
                                 _select ctrlCommit 0;
                                 _select ctrlShow true;
+
+                                if (_type == "weapon") then {
+                                    _key = "icons\win.paa";
+                                    _key2 = "icons\f.paa";
+                                    _info ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)+((ctrlTextHeight _select) / 2), .5, ctrlTextHeight _info];
+                                    _info ctrlSetStructuredText parseText ("<t align='center' shadow='2'>"+
+                                        "Weapon: <t color='#0A78F2'>$" + str _price + "</t><br/>"+
+                                        "Hold <img image='" + _key + "'/> To <t color='#0A78F2'>BUY</t><br/>"+
+                                        "Ammo: <t color='#0A78F2'>$" + str _price2 + "</t><br/>"+
+                                        "Hold <img image='" + _key2 + "'/> To <t color='#0A78F2'>BUY</t>"+
+                                    "</t>");
+                                    _info ctrlCommit 0;
+                                    _info ctrlShow true;
+                                } else {
+                                    _key = "icons\win.paa";
+                                    _info ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)+((ctrlTextHeight _select) / 2), .5, ctrlTextHeight _info];
+                                    _info ctrlSetStructuredText parseText ("<t align='center' shadow='2'><t color='#0A78F2'>$" + str _price + "</t><br/>Hold <img image='" + _key + "'/> To <t color='#0A78F2'>BUY</t></t>");
+                                    _info ctrlCommit 0;
+                                    _info ctrlShow true;
+                                };
 
                                 _x ctrlSetStructuredText parseText ("<t align='center' shadow='2'>" + _name + "<br/><t size='2'><img image='" + _icon + "' /></t></t>");
                                 _x ctrlSetFade 0;
@@ -87,7 +104,7 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                             };
                         } else {
                             _x ctrlSetStructuredText parseText ("<t align='center' shadow='2'>" + _name + "<br/><t size='2'><img image='" + _icon + "' /></t></t>");
-                            _x ctrlSetFade 0;
+                            _x ctrlSetFade ((player distance _item) / 10);
                         };
                         _x ctrlCommit 0;
                         _x ctrlShow true;
@@ -101,5 +118,5 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                 _x ctrlShow false;
             };
         };
-    } forEach ((allControls _ui)-[_image, _background, _text, _select]);
+    } forEach ((allControls _ui)-[_image, _background, _text, _select, _info]);
 };
