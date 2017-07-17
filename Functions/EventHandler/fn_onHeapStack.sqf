@@ -13,12 +13,9 @@ if (idleLoadingCount >= 11) then {
 
 onKeydownCooldown = false;
 
-switch (true) do {
+if (heapCount == 5) then {
     // every .5 seconds
-    case (heapCount == 5): {
-        ["Heap_functions"] call misc_fnc_autoInit;
-    };
-    default {};
+    ["Heap_functions"] call misc_fnc_autoInit;
 };
 
 sleep .1;
