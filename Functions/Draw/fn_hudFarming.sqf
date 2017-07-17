@@ -14,7 +14,7 @@ if (!isNil {uiNamespace getVariable ["hud_farming",displayNull]}) then {
             if !(_sPos isEqualTo []) then {
                 if (player distance _obj < 10) then {
                     _x ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _x) / 2), .5, ctrlTextHeight _x];
-                    if (cursorObject == _obj && (player distance _obj) < 5) then {
+                    if (realCursorObject == _obj && (player distance _obj) < 5) then {
                         _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>Resource</t><br/>Press [Win] to <t color='#00ff00'>FARM</t></t>");
                         _x ctrlSetFade 0;
                     } else {

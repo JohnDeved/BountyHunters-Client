@@ -10,7 +10,7 @@ if (!isNil {uiNamespace getVariable ["hud_carSale",displayNull]}) then {
             if !(_sPos isEqualTo []) then {
                 if (player distance _veh < 20) then {
                     _x ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _x) / 2), .5, ctrlTextHeight _x];
-                    if (cursorObject == _veh) then {
+                    if (realCursorObject == _veh) then {
                         if ((_veh distance player) < 5) then {
                             _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _name + "</t><br/><t color='#ff0000'>For Sale!</t><br/><t color='#00ff00'>$" + str _price + "</t><br/>Press [Win] to <t color='#00ff00'>BUY</t></t>");
                             _x ctrlSetFade 0;

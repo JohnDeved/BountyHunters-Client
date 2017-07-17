@@ -5,50 +5,50 @@ if !(onKeydownCooldown) then {
         switch (_key) do {
             case (0xDB): {
                 switch (true) do {
-                    case (cursorObject in nearVehicles): {
-                        if (!isNil {cursorObject getVariable "buyable"}) then {
-                            if ((cursorObject distance player) < 5) then {
+                    case (realCursorObject in nearVehicles): {
+                        if (!isNil {realCursorObject getVariable "buyable"}) then {
+                            if ((realCursorObject distance player) < 5) then {
                                 {
-                                    if ((configName _x) isEqualTo (typeOf cursorObject)) then {
-                                        [cursorObject] remoteExecCall ["payment_fnc_carShop", 2];
+                                    if ((configName _x) isEqualTo (typeOf realCursorObject)) then {
+                                        [realCursorObject] remoteExecCall ["payment_fnc_carShop", 2];
                                     };
                                 } forEach ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Vehicles"));
                                 onKeydownCooldown = true;
                             };
                         };
                     };
-                    case (cursorObject in nearWeapons): {
-                        if (!isNil {cursorObject getVariable "buyable"} || isSimpleObject cursorObject) then {
-                            if ((cursorObject distance player) < 5) then {
+                    case (realCursorObject in nearWeapons): {
+                        if (!isNil {realCursorObject getVariable "buyable"} || isSimpleObject realCursorObject) then {
+                            if ((realCursorObject distance player) < 5) then {
                                 onKeydownCooldown = true;
-                                [cursorObject, _key, .5, {
+                                [realCursorObject, _key, .5, {
                                     _weaponsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Weapons"));
                                     _attatchmentsConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Attatchments"));
                                     _clothingConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Clothing"));
                                     _headGearConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "HeadGear"));
                                     _backpackConfig = ("true" configClasses (missionConfigFile >> "CfgPrices" >> "Backpacks"));
-                                    if !(isSimpleObject cursorObject) then {
+                                    if !(isSimpleObject realCursorObject) then {
                                         {
-                                            if ((configName _x) isEqualTo (typeOf cursorObject)) then {
+                                            if ((configName _x) isEqualTo (typeOf realCursorObject)) then {
                                                 if (_x in _weaponsConfig) then {
-                                                    [cursorObject, "weapon"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                                    [realCursorObject, "weapon"] remoteExecCall ["payment_fnc_gunShop", 2];
                                                 };
                                                 if (_x in _attatchmentsConfig) then {
-                                                    [cursorObject, "attatchment"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                                    [realCursorObject, "attatchment"] remoteExecCall ["payment_fnc_gunShop", 2];
                                                 };
                                                 if (_x in _clothingConfig) then {
-                                                    [cursorObject, "clothing"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                                    [realCursorObject, "clothing"] remoteExecCall ["payment_fnc_gunShop", 2];
                                                 };
                                                 if (_x in _headGearConfig) then {
-                                                    [cursorObject, "headgear"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                                    [realCursorObject, "headgear"] remoteExecCall ["payment_fnc_gunShop", 2];
                                                 };
                                             };
                                         } forEach (_weaponsConfig + _attatchmentsConfig + _clothingConfig + _headGearConfig);
                                     } else {
-                                        _class = [cursorObject] call misc_fnc_getSimpleObjectClass;
+                                        _class = [realCursorObject] call misc_fnc_getSimpleObjectClass;
                                         {
                                             if ((configName _x) isEqualTo _class) then {
-                                                [cursorObject, "backpack"] remoteExecCall ["payment_fnc_gunShop", 2];
+                                                [realCursorObject, "backpack"] remoteExecCall ["payment_fnc_gunShop", 2];
                                             };
                                         } forEach _backpackConfig;
                                     };
@@ -56,11 +56,11 @@ if !(onKeydownCooldown) then {
                             };
                         };
                     };
-                    case (cursorObject in (nearTrees + nearBushes)): {
+                    case (realCursorObject in (nearTrees + nearBushes)): {
                         if (animationState player in ["amovpercmstpsnonwnondnon", "amovpercmstpsraswrfldnon", "amovpercmstpsraswpstdnon"]) then {
-                            if (player distance cursorObject < 5) then {
+                            if (player distance realCursorObject < 5) then {
                                 {
-                                    if (_x find cursorObject != -1) then {
+                                    if (_x find realCursorObject != -1) then {
                                             _plant = _x;
                                             _plant pushBack servertime;
                                             _plant remoteExecCall ["farming_fnc_harvestPlant", 2];
@@ -68,7 +68,7 @@ if !(onKeydownCooldown) then {
                                     };
                                 } forEach (nearFarmableBushes);
                                 {
-                                    if (_x find cursorObject != -1) then {
+                                    if (_x find realCursorObject != -1) then {
                                         hint str _x;
                                         player playmove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
                                     };
@@ -76,22 +76,22 @@ if !(onKeydownCooldown) then {
                             };
                         };
                     };
-                    case (cursorTarget in nearProcessors): {
-                        if (player distance cursorObject < 5) then {
-                            [cursorObject] remoteExecCall ["farming_fnc_processing", 2];
+                    case (realCursorObject in nearProcessors): {
+                        if (player distance realCursorObject < 5) then {
+                            [realCursorObject] remoteExecCall ["farming_fnc_processing", 2];
                         };
                     };
                     default {};
                 };
             };
             case (0x21): {
-                if (cursorObject isKindOf "WeaponHolder") then {
-                    if (!isNil {cursorObject getVariable "buyable"}) then {
-                        if ((cursorObject distance player) < 5) then {
+                if (realCursorObject isKindOf "WeaponHolder") then {
+                    if (!isNil {realCursorObject getVariable "buyable"}) then {
+                        if ((realCursorObject distance player) < 5) then {
                             onKeydownCooldown = true;
-                            if ((typeOf cursorObject) find "Weapon_" != -1) then {
-                                [cursorObject, _key, .5, {
-                                    [cursorObject, "ammo"] remoteExecCall ["payment_fnc_gunShop", 2];
+                            if ((typeOf realCursorObject) find "Weapon_" != -1) then {
+                                [realCursorObject, _key, .5, {
+                                    [realCursorObject, "ammo"] remoteExecCall ["payment_fnc_gunShop", 2];
                                 }] spawn dialog_fnc_actionKey;
                             };
                         };

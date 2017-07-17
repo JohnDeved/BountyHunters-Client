@@ -35,4 +35,8 @@ class Async
     {
         val = 0;
     };
+    class realCursorObject
+    {
+        val = 0;
+    };
 };

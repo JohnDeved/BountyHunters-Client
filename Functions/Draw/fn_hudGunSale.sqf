@@ -47,7 +47,7 @@ if (!isNil {uiNamespace getVariable ["hud_gunSale",displayNull]}) then {
                 if !(_sPos isEqualTo []) then {
                     if (player distance _item < 10) then {
                         _x ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _x) / 1.5), .5, ctrlTextHeight _x];
-                        if (cursorObject == _item) then {
+                        if (realCursorObject == _item) then {
                             if ((_item distance player) < 3) then {
                                 _selectIcon = "";
                                 if (actionKeyPressed == 1) then {

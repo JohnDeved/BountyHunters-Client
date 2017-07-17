@@ -15,7 +15,7 @@ if (!isNil {uiNamespace getVariable ["hud_processor",displayNull]}) then {
             if !(_sPos isEqualTo []) then {
                 if (player distance _processor < 10) then {
                     _x ctrlSetPosition [(_sPos select 0)-.25, (_sPos select 1)-((ctrlTextHeight _x) / 2), .5, ctrlTextHeight _x];
-                    if (cursorObject == _processor && (player distance _processor) < 5) then {
+                    if (realCursorObject == _processor && (player distance _processor) < 5) then {
                         _x ctrlSetStructuredText parseText ("<t align='center'><t size='1.5'>" + _processReturn + " Processor</t><br/><t color='#ff0000'>Resource</t><br/>Press [Win] to <t color='#00ff00'>Process</t></t>");
                         _x ctrlSetFade 0;
                     } else {
