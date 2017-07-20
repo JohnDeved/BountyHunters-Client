@@ -45,6 +45,7 @@ class Dialog_functions
 	{
 		file = "Functions\Dialog";
 		class playerMenu {};
+		class interaction {};
 		class actionKey {};
 	};
 };
@@ -55,10 +56,19 @@ class Draw_functions
 	{
 		file = "Functions\Draw";
 		// !- auto exec
-		class hudCarSale {};
-		class hudGunSale {};
-		class hudFarming {};
-		class hudProcessor {};
+		class hudInteraction {};
+	};
+};
+class Interaction_functions
+{
+	tag = "interaction";
+	class Interaction
+	{
+		file = "Functions\Interaction";
+		class carShop {};
+		class itemShop {};
+		class processor {};
+		class farming {};
 	};
 };
 class Heap_functions
@@ -82,5 +92,16 @@ class Filter_functions
 		class processors {};
 		class vehicles {};
 		class weapons {};
+	};
+};
+class HotKey_functions
+{
+	tag = "hotkey";
+	class HotKey
+	{
+		file = "Functions\HotKey";
+		class interact {};
+		class interactAlt {};
+		class playerMenu {};
 	};
 };

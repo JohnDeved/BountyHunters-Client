@@ -10,7 +10,6 @@ if (idleLoadingCount >= 11) then {
 } else {
     idleLoadingCount = idleLoadingCount + 1;
 };
-
 onKeydownCooldown = false;
 
 if (heapCount == 5) then {

@@ -49,4 +49,10 @@ if (!isNil {nearObjs}) then {
     nearFarmableBushes = call filter_fnc_bushes;
     nearFarmableTrees = [];
 
+    allNearObjects = [];
+    allNearObjects append nearBuyableVehicles;
+    allNearObjects append nearBuyableWeapons;
+    allNearObjects append nearUseableProcessors;
+    allNearObjects append nearFarmableBushes;
+    allNearObjects append nearFarmableTrees;
 };

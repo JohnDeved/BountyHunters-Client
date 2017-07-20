@@ -1,2 +1,2 @@
 if (!isServer) exitWith {};
-call misc_fnc_init;
+[] spawn misc_fnc_init;

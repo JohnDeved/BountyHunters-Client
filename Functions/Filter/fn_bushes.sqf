@@ -18,8 +18,8 @@ _farmableBushes = [];
             } forEach ("true" configClasses (missionConfigFile >> "CfgPlants"));
         } else {
             _time = varTower getVariable (str _bush);
-            if (_time < servertime) then {
-                [_bush, servertime] remoteExecCall ["farming_fnc_updatePlant", 2];
+            if (_time < realServerTime) then {
+                [_bush] remoteExecCall ["farming_fnc_updatePlant", 2];
             };
         };
     };

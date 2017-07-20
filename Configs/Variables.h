@@ -39,4 +39,12 @@ class Async
     {
         val = 0;
     };
+    class canBuyCursorItem
+    {
+        val = 0;
+    };
+    class canBuyCursorAmmo
+    {
+        val = 0;
+    };
 };

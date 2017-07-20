@@ -6,7 +6,7 @@ _nearUseableProcessors = [];
         {
             if (((configName _x) isEqualTo _processorType)) then {
                 _processTime = getNumber (_x >> "processtime");
-                _processReturn = getText (_x >> "processreturn");
+                _processReturn = getText (_x >> "variable");
                 _nearUseableProcessors pushBack [_processor, _processorType, _processTime, _processReturn];
             };
         } forEach ("true" configClasses (missionConfigFile >> "CfgProcessors"));

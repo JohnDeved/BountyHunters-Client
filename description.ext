@@ -85,3 +85,13 @@ class CfgDisabledCommands
 {
     #include ".\Configs\DisabledCommands.h"
 };
+
+class CfgImages
+{
+    #include ".\Configs\Images.h"
+};
+
+class CfgHotKeys
+{
+    #include ".\Configs\HotKeys.h"
+};

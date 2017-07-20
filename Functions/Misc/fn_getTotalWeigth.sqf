@@ -1,4 +1,3 @@
-_return = [];
 _maxWeigth = call misc_fnc_getMaxWeigth;
 _totalWeigth = 0;
 {
