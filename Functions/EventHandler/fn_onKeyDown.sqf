@@ -6,9 +6,8 @@ if !(onKeydownCooldown) then {
         {
             _handleKey = getNumber (_x >> "key");
             if (_handleKey == _key) then {
-                [_key] call (call compile ("hotkey_fnc_" + configName _x));
+                [_key] call (missionNamespace getVariable ("hotkey_fnc_" + configName _x));
             };
         } forEach ("true" configClasses (missionConfigFile >> "CfgHotKeys"));
-        systemChat str _key;
     };
 };
