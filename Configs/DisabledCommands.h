@@ -46,6 +46,15 @@ class ALLOWDAMAGE
     };
 };
 
+class ALLOWDAMMAGE
+{
+    class SYNTAX1
+    {
+        targets[] = {1,0,0};
+        args[] = {{"OBJECT"},{"BOOL"}};
+    };
+};
+
 class ONEACHFRAME
 {
     class SYNTAX1
