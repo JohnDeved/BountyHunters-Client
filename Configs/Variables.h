@@ -8,6 +8,14 @@ class Sync
     {
         val[] = {"C_man_polo_1_F", "C_man_polo_2_F", "C_man_polo_4_F", "C_man_polo_5_F", "C_man_p_fugitive_F"};
     };
+    class SpawnPosition
+    {
+        val[] = {7431.68, 8067.96, 0};
+    };
+    class SpawnRotation
+    {
+        val = 356.193;
+    };
     class vItems
     {
         val[] = {{"none", 1}};
